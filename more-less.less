@@ -22,12 +22,26 @@
 }
 
 
-.box-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.5) {
-    -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
-       -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
-            box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
-}
+//============================================================
+//
+// box-shadow
+//
+// @param colour              :  #000, rgba, hsla;
+// @param horizontal-offset   :  px, em;
+// @param vertical-offset     :  px, em;
+// @param blur-radius         :  px, em;
+// @param spread-distance     :  px, em,
+// @param inset               :  inset;
+//
+// @see http://www.w3.org/TR/css3-background/#box-shadow
+//
+//============================================================
 
+.box-shadow() {
+    -webkit-box-shadow: @arguments;
+       -moz-box-shadow: @arguments;
+            box-shadow: @arguments;
+}
 
 
 .border-radius-individual(@topleft: 0, @topright: 0, @bottomright: 0, @bottomleft: 0) {
@@ -294,6 +308,7 @@
             box-sizing: border-box; /* Opera/IE 8+ */
 }
 
+// clearfix, when you can't add the class
 .cf() {
     :before,
     :after {
@@ -306,25 +321,27 @@
     *zoom: 1;
 }
 
-
+// sample vars
 @bgColor: #FFC00E; // orange
 
-@bgGrey: #C4C6C8; // sidebar and nav
-@grey: #82939A; // for headlines and nav
-@orange: #F16F21; // class headlines and highlights
+@bgGrey: #C4C6C8;
+@grey: #82939A;
+@orange: #F16F21;
 @white: #fff;
 
-@baseFontSize: 14px;
-@baseLineHeight: 17px;
 @baseFontFamily: "Times New Roman", serif;
 @altFontFamily: 'Istok Web', sans-serif;
 
-@page-width : 840px;
+@baseFontSize: 14px;
+@baseLineHeight: 17px;
+
+@page-width : 960px;
 
 @sectionBackground: #DEE8EC;
 
 @sectionPadding: 0px;
 @sectionGap: 0px;
+
 @sectionBorder: solid 1px #e1e0df;
 @colorBorder: solid 1px #a697b8;
 
