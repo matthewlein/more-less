@@ -7,7 +7,7 @@
 
 <meta name="description" content="Widow Fix is a jQuery plugin to fix widows, or orphans, or whatever you call them—those single words on their own line. It's super lite easy to use!">
 
-<script src="js/jquery-1.4.3.min.js"></script>
+<script src="js/jquery-1.4.4.min.js"></script>
 <script src="../js/addEmail.js"></script>
 
 <script src="js/jquery.widowFix-1.3.2.min.js" charset="utf-8"></script>
@@ -39,27 +39,31 @@ blockquote {
 	margin-top: 0px;
 }
 #downloadWF {
-	display: block;
+	display: inline-block;
 	background-color: #6B96A4;
 	font-size: 15px;
 	color: #FFF;
 	text-decoration: none;
-	position: absolute;
-	top: 140px;
-	right: 50px;
 	text-shadow: 0 1px 0 rgba(0,0,0,0.6);
-	-webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+       -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+            box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
 	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
+	   -moz-border-radius: 5px;
+	        border-radius: 5px;
 	padding-top: 11px;
 	padding-right: 20px;
 	padding-bottom: 10px;
 	padding-left: 20px;
 	font-weight: bold;
+	position: relative;
 }
 #downloadWF:active {
-	margin-top: 1px;
+    top: 1px;
+    -webkit-box-shadow: 1px 1px 0px rgba(0,0,0,0.4);
+       -moz-box-shadow: 1px 1px 0px rgba(0,0,0,0.4);
+            box-shadow: 1px 1px 0px rgba(0,0,0,0.4);
+    
 }
 
 </style>
@@ -147,6 +151,9 @@ $(document).ready(function() {
     
     <p>If  the last word in your element is a link, then it will replace the space between <code>&lt;a href&gt;</code>, giving you <code>&lt;a&amp;nbsp;href&gt;.</code>The option <code>linkFix:true</code> will maintain your link and replace the proper space. Only add this option if this is a contant problem, as it will slightly slow down the script.</p>
     
+    <p>
+        See <a href="sample.html" title="sample">Sample</a> to see these in action.
+    </p>
     
     <h3>About the Plugin</h3>
     
